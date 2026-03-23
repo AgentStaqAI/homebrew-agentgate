@@ -11,7 +11,7 @@ class Agentgate < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/AgentStaqAI/agentgate/releases/download/v0.2.0/agentgate_Darwin_x86_64.tar.gz"
-      sha256 "1f3690fc099cb662183b325bc10a95dd8d9fdcaf6012942597d063571b879c31"
+      sha256 "8f5b7de7c7189e978698b1a8630526744ee422812b5b84e1a332d0887475b82b"
 
       define_method(:install) do
         bin.install "agentgate"
@@ -19,7 +19,7 @@ class Agentgate < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/AgentStaqAI/agentgate/releases/download/v0.2.0/agentgate_Darwin_arm64.tar.gz"
-      sha256 "ce439d5c3bc3ee2a738becfaca651dfece28430969bb7602841b8f173f5c8639"
+      sha256 "f86f68d3adfd574ee417cf9345ce79bce6c58004876f847c55576b0c7428f32a"
 
       define_method(:install) do
         bin.install "agentgate"
@@ -30,14 +30,14 @@ class Agentgate < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/AgentStaqAI/agentgate/releases/download/v0.2.0/agentgate_Linux_x86_64.tar.gz"
-      sha256 "e05aabef564d623cbc424f61ab99f90692dec72dd1a23191cee4a186b9ab61b4"
+      sha256 "e95b15cefa7af9c572fce500dd4ec8be685c23d967040a0fa7f9a713cf108645"
       define_method(:install) do
         bin.install "agentgate"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/AgentStaqAI/agentgate/releases/download/v0.2.0/agentgate_Linux_arm64.tar.gz"
-      sha256 "00d6678dd2d1018f8265cb58f1d3642480e8b403b6c4036875c9276c186b2eef"
+      sha256 "9c92dd78b9dc001862147b2b4fc12ff721eca180809b0239d9f9aaa616b4efd9"
       define_method(:install) do
         bin.install "agentgate"
       end
