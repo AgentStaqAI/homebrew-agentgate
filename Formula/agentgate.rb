@@ -5,21 +5,21 @@
 class Agentgate < Formula
   desc "AgentGate — Zero-Trust Semantic Firewall and Protocol Bridge for MCP"
   homepage "https://github.com/AgentStaqAI/agentgate"
-  version "0.1.0-alpha"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AgentStaqAI/agentgate/releases/download/v0.1.0-alpha/agentgate_Darwin_x86_64.tar.gz"
-      sha256 "f1e8b9898c87e28007540755d94a20e5c7bc97df674e4274ed06f7f461b5e7cf"
+      url "https://github.com/AgentStaqAI/agentgate/releases/download/v0.2.0/agentgate_Darwin_x86_64.tar.gz"
+      sha256 "1f3690fc099cb662183b325bc10a95dd8d9fdcaf6012942597d063571b879c31"
 
       define_method(:install) do
         bin.install "agentgate"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AgentStaqAI/agentgate/releases/download/v0.1.0-alpha/agentgate_Darwin_arm64.tar.gz"
-      sha256 "1325ec6aece58f90406c3d91dec745640e6822db8f6c5122037b8c5e263cc2c5"
+      url "https://github.com/AgentStaqAI/agentgate/releases/download/v0.2.0/agentgate_Darwin_arm64.tar.gz"
+      sha256 "ce439d5c3bc3ee2a738becfaca651dfece28430969bb7602841b8f173f5c8639"
 
       define_method(:install) do
         bin.install "agentgate"
@@ -29,15 +29,15 @@ class Agentgate < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AgentStaqAI/agentgate/releases/download/v0.1.0-alpha/agentgate_Linux_x86_64.tar.gz"
-      sha256 "50d8c53c6ca0dc3db8a5376b6704ca7b29a0f71403fdcbc31098f4380b2f6ac8"
+      url "https://github.com/AgentStaqAI/agentgate/releases/download/v0.2.0/agentgate_Linux_x86_64.tar.gz"
+      sha256 "e05aabef564d623cbc424f61ab99f90692dec72dd1a23191cee4a186b9ab61b4"
       define_method(:install) do
         bin.install "agentgate"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AgentStaqAI/agentgate/releases/download/v0.1.0-alpha/agentgate_Linux_arm64.tar.gz"
-      sha256 "98368ccedf55e5a0b21bf618e93edda81cc122a7b82ba1cf35d5eef17574de71"
+      url "https://github.com/AgentStaqAI/agentgate/releases/download/v0.2.0/agentgate_Linux_arm64.tar.gz"
+      sha256 "00d6678dd2d1018f8265cb58f1d3642480e8b403b6c4036875c9276c186b2eef"
       define_method(:install) do
         bin.install "agentgate"
       end
